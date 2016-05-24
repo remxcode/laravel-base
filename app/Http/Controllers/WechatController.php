@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Traits\WechatAuth;
 use App\Http\Controllers\Traits\WechatService;
-use Illuminate\Http\Request;
-use App\Http\Requests;
-
 
 class WechatController extends Controller
 {

@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateUserAuthsTable extends Migration
 {
@@ -19,7 +19,7 @@ class CreateUserAuthsTable extends Migration
 
             $table->string('type')->default('')->comment('授权类型');
             $table->string('openid')->default('');
-            $table->string('unionid')->default('')->comment('wechat unionid');;
+            $table->string('unionid')->default('')->comment('wechat unionid');
             $table->string('nickname')->default('')->comment('昵称');
             $table->string('name')->default('')->comment('姓名');
             $table->string('email')->default('')->comment('邮箱');
