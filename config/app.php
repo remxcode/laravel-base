@@ -235,6 +235,7 @@ return [
         'Flash' => Laracasts\Flash\Flash::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Wechat' => Overtrue\LaravelWechat\Facade::class,
     ],
 
 ];
