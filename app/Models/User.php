@@ -23,4 +23,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function userAuths()
+    {
+        return $this->hasMany(UserAuth::class);
+    }
+
+    public function wechatAuth()
+    {
+        return $this->hasOne(UserAuth::class)->where('type', 'wechat');
+    }
 }
