@@ -50,7 +50,7 @@ trait WechatService
     {
         $menu = EasyWeChat::menu();
         try {
-            $menu->add(self::buttons);// 请求微信服务器
+            $menu->add(self::buttons); // 请求微信服务器
             echo '设置成功！';
         } catch (\Exception $e) {
             echo '设置失败：'.$e->getMessage();
@@ -74,7 +74,7 @@ trait WechatService
 
         $transaction = $notify->verify();
 
-        if (! $transaction) {
+        if (!$transaction) {
             $notify->reply('FAIL', 'verify transaction error');
         }
 

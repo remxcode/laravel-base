@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Traits;
 
+use App\Models\User;
+use App\Models\UserAuth;
 use Auth;
 use Illuminate\Foundation\Auth\RedirectsUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Socialite;
-use App\Models\User;
-use App\Models\UserAuth;
 
 /**
  * Class WechatAuth.
