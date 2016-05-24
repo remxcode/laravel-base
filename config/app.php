@@ -182,7 +182,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
-
+        Overtrue\LaravelSocialite\ServiceProvider::class,
+        
     ],
 
     /*
@@ -236,6 +237,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
+        'Socialite' => Overtrue\LaravelSocialite\Socialite::class,
     ],
 
 ];
