@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App;
 use Illuminate\Support\ServiceProvider;
 
 class LocalServiceProvider extends ServiceProvider
@@ -20,8 +21,8 @@ class LocalServiceProvider extends ServiceProvider
     public function register()
     {
         $app = app();
-        if ($app->environment('local')) {
             $app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        if (App::isLocal()) {
             $app->register(\Laracasts\Generators\GeneratorsServiceProvider::class);
         }
     }
