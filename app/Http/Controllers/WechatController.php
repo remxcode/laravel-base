@@ -9,7 +9,6 @@ use View;
 
 class WechatController extends Controller
 {
-
     const buttons = [
         [
             'name'       => 'name',
@@ -33,18 +32,15 @@ class WechatController extends Controller
      */
     private $wechatService;
 
-
     public function __construct(WechatService $wechatService)
     {
         $this->wechatService = $wechatService;
     }
 
-
     public function server()
     {
         return $this->wechatService->server();
     }
-
 
     public function getWechatLogin(Request $request)
     {
@@ -54,7 +50,6 @@ class WechatController extends Controller
 
         return redirect($url);
     }
-
 
     public function createUserAuth()
     {
@@ -67,12 +62,11 @@ class WechatController extends Controller
             'nickname' => $wechatUser['nickname'],
             'avatar'   => $wechatUser['headimgurl'],
         ];
-        $user_auth      = UserAuth::updateOrCreate(['type' => 'wechat', 'auth_id' => $wechatUser['openid']],
+        $user_auth = UserAuth::updateOrCreate(['type' => 'wechat', 'auth_id' => $wechatUser['openid']],
             $user_auth_data);
 
         return $user_auth;
     }
-
 
     public function redirectAfterCreate($user_auth, $request)
     {
@@ -83,11 +77,10 @@ class WechatController extends Controller
         $query = http_build_query($query);
 
         $authUrl = env('FRONTEND').'/#!/auth/';
-        $subUrl  = $user_auth->user_id ? 'wechatLogin' : 'register';
+        $subUrl = $user_auth->user_id ? 'wechatLogin' : 'register';
 
         return $authUrl.$subUrl.'?'.$query;
     }
-
 
     //可复写这个方法
     public function register($user_auth)
@@ -101,12 +94,10 @@ class WechatController extends Controller
         Auth::login($user);
     }
 
-
     public function getMenu()
     {
         return $this->wechatService->addMenu(self::buttons);
     }
-
 
     public function getJsConfig(Request $request)
     {
@@ -115,11 +106,10 @@ class WechatController extends Controller
         return $this->wechatService->jsConfig($data, [], env('APP_DEBUG', false));
     }
 
-
     public function getTip()
     {
         $message = '一个微信帐号只能预约一次呦,现在为您跳转到官网';
-        $url     = 'http://www.szfashionweek.com';
+        $url = 'http://www.szfashionweek.com';
 
         return View::make('tip', compact('message', 'url'));
     }
