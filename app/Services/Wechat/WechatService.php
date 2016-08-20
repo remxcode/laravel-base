@@ -1,16 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Traits;
+namespace App\Services\Wechat;
 
 use EasyWeChat;
-use Illuminate\Http\Request;
+use EasyWeChat\Payment\Notify;
+use Illuminate\Support\Facades\Log;
+use App\Services\Wechat\Traits\Auth;
 
-trait WechatService
+class WechatService
 {
+    use Auth;
+
+    const wechatAccountName = '智鸣跳绳';
+
     /**
      * 处理微信的请求消息.
      *
-     * @param Request    $request
      * @param EasyWeChat $server
      *
      * @return string
@@ -19,20 +24,16 @@ trait WechatService
      * @internal param Server $server
      * @internal param Overtrue\Wechat\Server $server
      */
-    public function serve(Request $request)
+    public function serve()
     {
-        Log::info('request arrived.');
-
-        $server = EasyWeChat::server();
-        $server = $this->onMsgAndEvent($server);
-
-        Log::info('return response.');
+        $server = $this->setMsgAndEvent(EasyWeChat::server());
 
         return $server->serve();
     }
 
+
     //可复写该方法
-    protected function onMsgAndEvent($server)
+    protected function setMsgAndEvent($server)
     {
         $server->setMessageHandler(function ($message) {
             switch ($message->Event) {
@@ -46,25 +47,27 @@ trait WechatService
         return $server;
     }
 
-    public function menu()
+
+    public function addMenu($buttons)
     {
-        $menu = EasyWeChat::menu();
         try {
-            $menu->add(self::buttons); // 请求微信服务器
+            EasyWeChat::menu()->add($buttons);
             echo '设置成功！';
         } catch (\Exception $e) {
             echo '设置失败：'.$e->getMessage();
         }
     }
 
-    public function getJsConfig(Request $request)
+
+    public function jsConfig($option, array $apis = [], $debug = false, $beta = false, $json = true)
     {
         $js = EasyWeChat::js();
-        $request->url ? $js->setUrl($request->url) : '';
-        $apis = ['onMenuShareTimeline', 'onMenuShareAppMessage'];
+        $option['url'] ? $js->setUrl($option['url']) : '';
+        $apis = $apis ? $apis : ['onMenuShareTimeline', 'onMenuShareAppMessage'];
 
-        return $js->config($apis, $debug = env('APP_DEBUG', false), $beta = false, $json = true);
+        return $js->config($apis, $debug, $beta, $json);
     }
+
 
     //微信支付回掉
     public function notify()
@@ -74,7 +77,7 @@ trait WechatService
 
         $transaction = $notify->verify();
 
-        if (!$transaction) {
+        if ( ! $transaction) {
             $notify->reply('FAIL', 'verify transaction error');
         }
 
@@ -84,6 +87,7 @@ trait WechatService
 
         Log::info($res);
     }
+
 
     /**
      * 处理支付.
