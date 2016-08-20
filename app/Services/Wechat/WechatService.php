@@ -2,10 +2,10 @@
 
 namespace App\Services\Wechat;
 
+use App\Services\Wechat\Traits\Auth;
 use EasyWeChat;
 use EasyWeChat\Payment\Notify;
 use Illuminate\Support\Facades\Log;
-use App\Services\Wechat\Traits\Auth;
 
 class WechatService
 {
@@ -31,7 +31,6 @@ class WechatService
         return $server->serve();
     }
 
-
     //可复写该方法
     protected function setMsgAndEvent($server)
     {
@@ -47,7 +46,6 @@ class WechatService
         return $server;
     }
 
-
     public function addMenu($buttons)
     {
         try {
@@ -58,7 +56,6 @@ class WechatService
         }
     }
 
-
     public function jsConfig($option, array $apis = [], $debug = false, $beta = false, $json = true)
     {
         $js = EasyWeChat::js();
@@ -68,7 +65,6 @@ class WechatService
         return $js->config($apis, $debug, $beta, $json);
     }
 
-
     //微信支付回掉
     public function notify()
     {
@@ -77,7 +73,7 @@ class WechatService
 
         $transaction = $notify->verify();
 
-        if ( ! $transaction) {
+        if (!$transaction) {
             $notify->reply('FAIL', 'verify transaction error');
         }
 
@@ -87,7 +83,6 @@ class WechatService
 
         Log::info($res);
     }
-
 
     /**
      * 处理支付.

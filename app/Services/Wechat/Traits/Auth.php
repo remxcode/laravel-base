@@ -16,7 +16,6 @@ trait Auth
         return session('wechat.oauth_user')->original;
     }
 
-
     public function redirestToOpenWechat()
     {
         return Socialite::driver('wechat')->scopes(['snsapi_login'])->redirect();
@@ -33,6 +32,4 @@ trait Auth
         dd($user);
         // $user->token;
     }
-
-
 }
