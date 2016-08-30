@@ -4,12 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74c687c0404abdbda7717034f0127e32",
-    "content-hash": "c84c2cef98c27073d28119b82c0efb0f",
+    "hash": "1c9daa77eb2f1846308c0e1fd681693c",
+    "content-hash": "eae906f4c25e57a292a0ba4af78b39c5",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "dev-master",
+            "version": "V2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
@@ -646,16 +646,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.0",
+            "version": "v5.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7d116dc5a008e69c97f864af79ac46ab6a8d5895"
+                "reference": "7159ffbadc79558a42ece2cdd1ec2e7e13105b5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/laravel/framework/7d116dc5a008e69c97f864af79ac46ab6a8d5895.zip",
-                "reference": "7d116dc5a008e69c97f864af79ac46ab6a8d5895",
+                "url": "https://packagist.phpcomposer.com/files/laravel/framework/7159ffbadc79558a42ece2cdd1ec2e7e13105b5d.zip",
+                "reference": "7159ffbadc79558a42ece2cdd1ec2e7e13105b5d",
                 "shasum": ""
             },
             "require": {
@@ -769,20 +769,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-08-23 13:04:04"
+            "time": "2016-08-26 21:40:26"
         },
         {
             "name": "laravelcollective/html",
-            "version": "dev-master",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "c4c87916c34e04aa9d4e860315ab1858304d786a"
+                "reference": "961ce141c16c6b085128f209496c26efd3e681ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/LaravelCollective/html/c4c87916c34e04aa9d4e860315ab1858304d786a.zip",
-                "reference": "c4c87916c34e04aa9d4e860315ab1858304d786a",
+                "url": "https://packagist.phpcomposer.com/files/LaravelCollective/html/961ce141c16c6b085128f209496c26efd3e681ca.zip",
+                "reference": "961ce141c16c6b085128f209496c26efd3e681ca",
                 "shasum": ""
             },
             "require": {
@@ -799,11 +799,6 @@
                 "phpunit/phpunit": "~5.4"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.3-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Collective\\Html\\": "src/"
@@ -828,7 +823,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2016-08-04 03:49:50"
+            "time": "2016-08-27 23:52:43"
         },
         {
             "name": "league/flysystem",
@@ -1232,16 +1227,16 @@
         },
         {
             "name": "overtrue/laravel-wechat",
-            "version": "3.0.6",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/laravel-wechat.git",
-                "reference": "98a337bd418c0424dd231d395470ca39ed7302f2"
+                "reference": "1880acfeb6cda15d521c3b35f36b7dfc7c14bccb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/overtrue/laravel-wechat/98a337bd418c0424dd231d395470ca39ed7302f2.zip",
-                "reference": "98a337bd418c0424dd231d395470ca39ed7302f2",
+                "url": "https://packagist.phpcomposer.com/files/overtrue/laravel-wechat/1880acfeb6cda15d521c3b35f36b7dfc7c14bccb.zip",
+                "reference": "1880acfeb6cda15d521c3b35f36b7dfc7c14bccb",
                 "shasum": ""
             },
             "require": {
@@ -1270,7 +1265,7 @@
                 "wechat",
                 "weixin"
             ],
-            "time": "2016-07-25 23:41:02"
+            "time": "2016-08-23 13:45:21"
         },
         {
             "name": "overtrue/socialite",
@@ -2831,12 +2826,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "2e51a84355f69b8b091abdac497a21a2ebc5621c"
+                "reference": "c8df4d72f3c33a4ae58d3274fe2072402078b472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/Codeception/Codeception/2e51a84355f69b8b091abdac497a21a2ebc5621c.zip",
-                "reference": "2e51a84355f69b8b091abdac497a21a2ebc5621c",
+                "url": "https://packagist.phpcomposer.com/files/Codeception/Codeception/c8df4d72f3c33a4ae58d3274fe2072402078b472.zip",
+                "reference": "c8df4d72f3c33a4ae58d3274fe2072402078b472",
                 "shasum": ""
             },
             "require": {
@@ -2847,8 +2842,10 @@
                 "guzzlehttp/guzzle": ">=4.1.4 <7.0",
                 "guzzlehttp/psr7": "~1.0",
                 "php": ">=5.4.0 <8.0",
-                "phpunit/php-code-coverage": ">=2.1.3",
-                "phpunit/phpunit": ">4.8.20 <5.5",
+                "phpunit/php-code-coverage": ">=2.1.3 <5.0",
+                "phpunit/phpunit": ">4.8.20 <6.0",
+                "sebastian/comparator": "~1.1",
+                "sebastian/diff": "^1.4",
                 "symfony/browser-kit": ">=2.7 <4.0",
                 "symfony/console": ">=2.7 <4.0",
                 "symfony/css-selector": ">=2.7 <4.0",
@@ -2912,7 +2909,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2016-06-10 15:19:52"
+            "time": "2016-08-28 20:47:38"
         },
         {
             "name": "doctrine/instantiator",
@@ -3109,16 +3106,16 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v5.2.25",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "38e3ce9d8dd930a561592996f9f07fe1c6083b20"
+                "reference": "a2a0804a5bf26172f67ba3d491ad8a19028bbab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/illuminate/console/38e3ce9d8dd930a561592996f9f07fe1c6083b20.zip",
-                "reference": "38e3ce9d8dd930a561592996f9f07fe1c6083b20",
+                "url": "https://packagist.phpcomposer.com/files/illuminate/console/a2a0804a5bf26172f67ba3d491ad8a19028bbab5.zip",
+                "reference": "a2a0804a5bf26172f67ba3d491ad8a19028bbab5",
                 "shasum": ""
             },
             "require": {
@@ -3151,16 +3148,16 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Illuminate Console package.",
-            "homepage": "http://laravel.com",
-            "time": "2016-03-09 16:31:29"
+            "homepage": "https://laravel.com",
+            "time": "2016-08-07 19:56:57"
         },
         {
             "name": "illuminate/container",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -3203,7 +3200,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3245,7 +3242,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -3290,7 +3287,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -3340,7 +3337,7 @@
         },
         {
             "name": "illuminate/http",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
@@ -3386,7 +3383,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -3430,7 +3427,7 @@
         },
         {
             "name": "illuminate/routing",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
@@ -3486,7 +3483,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -3536,7 +3533,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -3593,7 +3590,7 @@
         },
         {
             "name": "illuminate/view",
-            "version": "5.3.x-dev",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -4356,16 +4353,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.4.8",
+            "version": "5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3132365e1430c091f208e120b8845d39c25f20e6"
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/3132365e1430c091f208e120b8845d39c25f20e6.zip",
-                "reference": "3132365e1430c091f208e120b8845d39c25f20e6",
+                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/3e6e88e56c912133de6e99b87728cca7ed70c5f5.zip",
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5",
                 "shasum": ""
             },
             "require": {
@@ -4404,7 +4401,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.4.x-dev"
+                    "dev-master": "5.5.x-dev"
                 }
             },
             "autoload": {
@@ -4430,20 +4427,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-07-26 14:48:00"
+            "time": "2016-08-26 07:11:44"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.2.4",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "4e83390f64e7ce04fcaec2ce95cd72823b431d19"
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit-mock-objects/4e83390f64e7ce04fcaec2ce95cd72823b431d19.zip",
-                "reference": "4e83390f64e7ce04fcaec2ce95cd72823b431d19",
+                "url": "https://packagist.phpcomposer.com/files/sebastianbergmann/phpunit-mock-objects/46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49.zip",
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
                 "shasum": ""
             },
             "require": {
@@ -4489,7 +4486,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-08-17 09:33:51"
+            "time": "2016-08-26 05:51:59"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

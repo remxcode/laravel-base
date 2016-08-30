@@ -10,7 +10,7 @@
         "laravelcollective/html": "5.3.*",
         "barryvdh/laravel-debugbar": "2.2.*",
         "laracasts/flash": "~2.0",
-        "overtrue/laravel-wechat": "^3.0",
+        "overtrue/laravel-wechat": "^3.1",
         "overtrue/laravel-socialite": "~1.0"
     },
     "require-dev": {
