@@ -56,9 +56,11 @@ size:
   array: :attribute 必须包括 :size 项
 url: :attribute 无效的格式
 timezone: :attribute 必须是个有效的时区
+hash: :attribute 错误
 
 attributes:
   username: 用户名
   mobile: 手机号
   password: 密码
+  old_password: 原密码
   content: 内容

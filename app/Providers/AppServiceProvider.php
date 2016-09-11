@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Validators\HashValidator;
 use Illuminate\Support\ServiceProvider;
+use Validator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::resolver(function($translator, $data, $rules, $messages) {
+            return new HashValidator($translator, $data, $rules, $messages);
+        });
     }
 
     /**
