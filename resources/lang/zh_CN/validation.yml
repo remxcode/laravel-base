@@ -57,6 +57,9 @@ size:
 url: :attribute 无效的格式
 timezone: :attribute 必须是个有效的时区
 hash: :attribute 错误
+verify_code: 验证码 错误
+confirm_rule: 手机号码前后不一致
+zh_mobile: 手机号码格式错误
 
 attributes:
   username: 用户名
