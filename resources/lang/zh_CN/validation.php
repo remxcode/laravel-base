@@ -2,4 +2,4 @@
 
 use Symfony\Component\Yaml\Yaml;
 
-return Yaml::parse(file_get_contents(base_path('/resources/lang/zh_CN/validation.yml')));
+return Yaml::parse(file_get_contents(resource_path('/lang/zh_CN/validation.yml')));
