@@ -12,7 +12,7 @@ class CreateUserAuthsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_auths', function (Blueprint $table) {
+        Schema::create('user_auth', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->nullable()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -37,6 +37,6 @@ class CreateUserAuthsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user_auths');
+        Schema::dropIfExists('user_auth');
     }
 }
