@@ -34,4 +34,15 @@ class User extends Authenticatable
     {
         return $this->hasOne(UserAuth::class)->where('type', 'wechat');
     }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        // TODO: Implement sendPasswordResetNotification() method.
+    }
 }
