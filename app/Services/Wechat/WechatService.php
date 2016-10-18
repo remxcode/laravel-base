@@ -73,7 +73,7 @@ class WechatService
 
         $transaction = $notify->verify();
 
-        if (!$transaction) {
+        if (! $transaction) {
             $notify->reply('FAIL', 'verify transaction error');
         }
 
