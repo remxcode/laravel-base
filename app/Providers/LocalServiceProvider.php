@@ -23,7 +23,6 @@ class LocalServiceProvider extends ServiceProvider
         $app = app();
         if (App::isLocal()) {
             $app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-            $app->register(\Laracasts\Generators\GeneratorsServiceProvider::class);
         }
     }
 }
