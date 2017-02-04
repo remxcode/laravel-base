@@ -37,5 +37,3 @@ Route::group(['prefix' => 'wechat'], function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
