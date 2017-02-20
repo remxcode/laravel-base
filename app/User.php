@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -18,7 +19,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes excluded from the model's JSON form.
+     * The attributes that should be hidden for arrays.
      *
      * @var array
      */
@@ -36,15 +37,4 @@ class User extends Authenticatable
         return $this->hasOne(UserAuth::class)->where('type', 'wechat');
     }
 
-    /**
-     * Send the password reset notification.
-     *
-     * @param string $token
-     *
-     * @return void
-     */
-    public function sendPasswordResetNotification($token)
-    {
-        // TODO: Implement sendPasswordResetNotification() method.
-    }
 }
